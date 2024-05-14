@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+}
+body{
+    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navBar{
+    height: 8vh;
+    width: 100%;
+    background-color: #222222;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.8s; 
+}
+h2{
+   cursor: pointer;
+   transition: 0.8s; 
+}
+h3{
+    cursor: pointer;
+    transition: 0.8s;  
+}
+a:hover{
+    color:blue ;
+}
+h3:hover{
+    color:rgb(255, 0, 0);
+}
+h2:hover{
+    color:rgb(0, 255, 60);
+}
