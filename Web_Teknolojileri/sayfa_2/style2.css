@@ -26,18 +26,25 @@ a{
 h2{
    cursor: pointer;
    transition: 0.8s; 
-   color:rgb(0, 255, 60);
 }
 h3{
     cursor: pointer;
     transition: 0.8s;  
 }
+h4{
+    cursor: pointer;
+    transition: 0.8s;  
+    color:rgb(34, 255, 0);
+}
 a:hover{
     color:blue ;
+}
+h2:hover{
+    color:rgb(0, 255, 60);
 }
 h3:hover{
     color:rgb(255, 0, 0);
 }
-h2:hover{
+h4:hover{
     color:blue;
 }
