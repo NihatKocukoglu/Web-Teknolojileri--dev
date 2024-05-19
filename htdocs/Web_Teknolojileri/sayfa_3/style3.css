@@ -1,14 +1,80 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins','sans-serif';
+    font-family: 'Poppins', 'sans-serif';
 }
-body{
-    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1) ;
+
+body {
+    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1);
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0; 
+    padding: 0; 
 }
-.navBar{
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.info {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.fade {
+    animation: fadeEffect 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeEffect {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.navBar {
     height: 8vh;
     width: 100%;
     background-color: #222222;
@@ -18,46 +84,74 @@ body{
     flex-direction: row;
     justify-content: space-around;
 }
-a{
+
+a {
     text-decoration: none;
     color: whitesmoke;
     transition: 0.8s; 
 }
-h2{
-   cursor: pointer;
-   transition: 0.8s; 
-}
-h3{
+
+h2, h3, h4 {
     cursor: pointer;
-    transition: 0.8s;  
+    transition: 0.8s; 
 }
-h4{
+
+h4 {
+    color: rgb(34, 255, 0);
+}
+
+a:hover {
+    color: blue;
+}
+
+h2:hover {
+    color: rgb(0, 255, 60);
+}
+
+h3:hover {
+    color: rgb(255, 0, 0);
+}
+
+h4:hover {
+    color: blue;
+}
+
+.content {
+    padding: 20px;
+}
+
+.prev, .next {
     cursor: pointer;
-    transition: 0.8s;  
-    color:rgb(34, 255, 0);
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
 }
-a:hover{
-    color:blue ;
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
-h2:hover{
-    color:rgb(0, 255, 60);
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
 }
-h3:hover{
-    color:rgb(255, 0, 0);
-}
-h4:hover{
-    color:blue;
-}
+
 @media only screen and (max-width: 700px) {
     body {
         background-image: url(https://images.unsplash.com/photo-1651069300484-3193d08badbb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-        background-position: center top 158px; /* Arka plan resminin merkez üst kısmına 20 piksel boşluk */
-        /* Diğer arka plan özellikleri */
+        background-position: center top 158px;
     }
 
     .navBar {
-        
-        flex-direction: column; /* Menü öğelerini sütun olarak düzenler */
-        height: auto; /* Menü yüksekliğini otomatik olarak ayarlar */
+        flex-direction: column;
+        height: auto;
     }
 }

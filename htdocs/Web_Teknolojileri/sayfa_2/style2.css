@@ -1,12 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins','sans-serif';
 }
-body{
-    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1) ;
+
+body {
+    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1);
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0; 
+    padding: 0; 
+    /* Arka plan resmini dikey ve yatayda merkezler */
 }
 .navBar{
     height: 8vh;

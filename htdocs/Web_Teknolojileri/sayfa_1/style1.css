@@ -1,14 +1,20 @@
-*{
+/* CSS sıfırlama */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins','sans-serif';
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
-body{
-    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1) ;
+
+body {
+    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1);
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
-.navBar{
+
+.navBar {
     height: 8vh;
     width: 100%;
     background-color: #222222;
@@ -18,46 +24,77 @@ body{
     flex-direction: row;
     justify-content: space-around;
 }
-a{
+
+a {
     text-decoration: none;
-    color: whitesmoke;
-    transition: 0.8s; 
+    color: rgb(255, 255, 255);
+    transition: 0.8s;
 }
-h2{
-   cursor: pointer;
-   transition: 0.8s; 
-}
-h3{
+
+h2, h3, h4 {
     cursor: pointer;
-    transition: 0.8s;  
+    transition: 0.8s;
+    position: relative;
 }
-h4{
-    cursor: pointer;
-    transition: 0.8s;  
-    color:rgb(34, 255, 0);
+h5{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.8s;
 }
-a:hover{
-    color:blue ;
+h5:hover{
+    color: blue;
 }
-h2:hover{
-    color:rgb(0, 255, 60);
+
+h4 {
+    color: rgb(34, 255, 0);
 }
-h3:hover{
-    color:rgb(255, 0, 0);
+
+a:hover {
+    color: blue;
 }
-h4:hover{
-    color:blue;
+
+h2:hover {
+    color: rgb(0, 255, 60);
 }
+
+h3:hover {
+    color: rgb(255, 0, 0);
+}
+
+h4:hover {
+    color: blue;
+}
+
+/* Hakkında Sayfası İçin Özel Stil */
+.hakkında-content {
+    background-color: rgba(255, 255, 255, 0.3); /* Yarı saydam beyaz arka plan */
+    border: 1px solid black; /* İnce siyah kenarlık */
+    padding: 20px; /* İçeriğin iç boşluğu */
+    margin: 20px; /* İçeriğin dış boşluğu */
+}
+
+.info {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.resim {
+    max-width: 30%;
+    height: auto;
+}
+
+
+/* Mobil Cihazlar İçin Medya Sorgusu */
 @media only screen and (max-width: 700px) {
     body {
         background-image: url(https://images.unsplash.com/photo-1651069300484-3193d08badbb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-        background-position: center top 158px; /* Arka plan resminin merkez üst kısmına 20 piksel boşluk */
-        /* Diğer arka plan özellikleri */
+        background-position: center top 158px;
     }
 
     .navBar {
-        
-        flex-direction: column; /* Menü öğelerini sütun olarak düzenler */
-        height: auto; /* Menü yüksekliğini otomatik olarak ayarlar */
+        flex-direction: column;
+        height: auto;
     }
 }

@@ -5,8 +5,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Kullanıcı adı ve şifreyi kontrol etmek için sabit değerler
-$correct_username = "b000000000";
-$correct_password = "b000000000";
+$correct_username = "b221210054@sakarya.edu.tr";
+$correct_password = "b221210054";
 
 // Formdan gelen kullanıcı adı ve şifre
 $username = $_POST['username'];
