@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','sans-serif';
+}
+body{
+    background-image: url(https://kusbakisiblog.wordpress.com/wp-content/uploads/2018/02/dji_0005.jpg?w=1024&h=633&crop=1) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navBar{
+    height: 8vh;
+    width: 100%;
+    background-color: #222222;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.8s; 
+}
+h2{
+   cursor: pointer;
+   transition: 0.8s; 
+}
+h3{
+    cursor: pointer;
+    transition: 0.8s;  
+}
+h4{
+    cursor: pointer;
+    transition: 0.8s;  
+    color:rgb(34, 255, 0);
+}
+h5{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.8s;
+}
+h5:hover{
+    color: blue;
+}
+a:hover{
+    color:blue ;
+}
+h2:hover{
+    color:rgb(0, 255, 60);
+}
+h3:hover{
+    color:rgb(255, 0, 0);
+}
+h4:hover{
+    color:blue;
+}
+
+.info {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.sakarya-spor-logo {
+    max-width: 60%; /* Maksimum genişlik */
+    height: auto; /* Yükseklik otomatik olarak ayarlanacak */
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-image: url(https://images.unsplash.com/photo-1651069300484-3193d08badbb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-position: center top 158px; /* Arka plan resminin merkez üst kısmına 20 piksel boşluk */
+        /* Diğer arka plan özellikleri */
+    }
+
+    .navBar {
+        
+        flex-direction: column; /* Menü öğelerini sütun olarak düzenler */
+        height: auto; /* Menü yüksekliğini otomatik olarak ayarlar */
+    }
+}
