@@ -1,25 +1,55 @@
 <!DOCTYPE html>
-<html lang =en>
-    <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width-device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/Web_Teknolojileri/sayfa_4/style4.css">
-    
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Web_Teknolojileri/sayfa_4/style4.css">
+    <title>YouTube Video Arama</title>
 </head>
-    <body>
-             
-<nav class="navBar">
-    <a href="/Web_Teknolojileri/AnaSayfa/AnaSayfa.html"><h2>Ana Sayfa</h2></a>
-    <a href="/Web_Teknolojileri/sayfa_1/sayfa_1.html">Hakkında</a>
-    <a href="/Web_Teknolojileri/sayfa_2/sayfa_2.html">CV</a>
-    <a href="/Web_Teknolojileri/sayfa_3/sayfa_3.html">Şehrim</a>
-    <a href="/Web_Teknolojileri/sayfa_4/sayfa_4.html"><h4>ilgi alanlarım</h4></a>
-    <a href="/Web_Teknolojileri/sayfa_5/sayfa_5.html">iletişim sayfası</a>
-    <a href="/Web_Teknolojileri/sayfa_6/sayfa_6.html">Mirasımız</a>
-   <h3>|<a href ="http://localhost/index.php"> Giriş Yap</a>|</h3>
-</nav>
-<p>(sayfa_4 paragrafı olucak)</p>        
-    </body>
+<body>
+    <nav class="navBar">
+        <a href="/Web_Teknolojileri/AnaSayfa/AnaSayfa.html"><h2>Ana Sayfa</h2></a>
+        <a href="/Web_Teknolojileri/sayfa_1/sayfa_1.html">Hakkında</a>
+        <a href="/Web_Teknolojileri/sayfa_2/sayfa_2.html">CV</a>
+        <a href="/Web_Teknolojileri/sayfa_3/sayfa_3.html">Şehrim</a>
+        <a href="/Web_Teknolojileri/sayfa_4/sayfa_4.html"><h4>ilgi alanlarım</h4></a>
+        <a href="/Web_Teknolojileri/sayfa_5/sayfa_5.html">iletişim sayfası</a>
+        <a href="/Web_Teknolojileri/sayfa_6/sayfa_6.html">Mirasımız</a>
+        <h3>|<a href="http://localhost/index.php">Giriş Yap</a>|</h3>
+    </nav>
+
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Video Adı">
+        <button type="submit">Ara</button>
+    </form>
+    <div id="videoList"></div>
+
+    <script>
+        // Rastgele bir video kimliği seçmek için fonksiyon
+        function getRandomVideoId() {
+            // Rastgele bir video kimliği seçin veya burada başka bir yöntem kullanabilirsiniz
+            var randomVideoIds = ["VIDEO_ID_1", "VIDEO_ID_2", "VIDEO_ID_3"]; // Rastgele videoların kimlikleri
+            var randomIndex = Math.floor(Math.random() * randomVideoIds.length);
+            return randomVideoIds[randomIndex];
+        }
+
+        // Rastgele bir video gösteren fonksiyon
+        function displayRandomVideo() {
+            var videoList = document.getElementById("videoList");
+            videoList.innerHTML = ""; // Önceki sonuçları temizle
+
+            var randomVideoId = getRandomVideoId();
+            videoList.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${randomVideoId}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        }
+
+        // Form gönderildiğinde çalışacak fonksiyon
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Sayfanın yenilenmesini engellemek için
+
+            // Rastgele video göster
+            displayRandomVideo();
+        });
+    </script>
+</body>
 </html>
